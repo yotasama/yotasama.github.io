@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>牛越的个人主页</title>
+    <style>
+        /* 基础样式 */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --text-color: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        /* 头部样式 */
+        header {
+            background: var(--primary-color);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        nav {
+            background: rgba(255,255,255,0.1);
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s;
+        }
+
+        nav a:hover {
+            background: var(--secondary-color);
+            border-radius: 4px;
+        }
+
+        /* 主体内容 */
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            margin: 3rem 0;
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .project-card {
+            background: white;
+            padding: 1rem;
+            border-radius: 6px;
+            border: 1px solid #eee;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>牛越的个人主页</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">关于我</a></li>
+                <li><a href="#projects">项目展示</a></li>
+                <li><a href="#skills">技能栈</a></li>
+                <li><a href="#contact">联系方式</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>👋 关于我</h2>
+            <p>全栈开发者，5年互联网产品开发经验，擅长React和Node.js技术栈，主导过3个百万级用户项目的架构设计。</p>
+        </section>
+
+        <section id="projects">
+            <h2>🚀 项目展示</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>电商后台系统</h3>
+                    <p>基于微服务架构的分布式电商平台，日均处理订单量10万+</p>
+                </div>
+                <div class="project-card">
+                    <h3>智能客服系统</h3>
+                    <p>集成NLP技术的在线客服系统，应答准确率达92%</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>💻 技术栈</h2>
+            <ul>
+                <li>前端：React/Vue/TypeScript</li>
+                <li>后端：Node.js/Java/Spring Cloud</li>
+                <li>数据库：MySQL/MongoDB/Redis</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>📧 联系我</h2>
+            <form action="mailto:your.email@example.com" method="post">
+                <input type="text" name="name" placeholder="姓名" required>
+                <input type="email" name="email" placeholder="邮箱" required>
+                <textarea name="message" rows="4" placeholder="留言内容" required></textarea>
+                <button type="submit">发送消息</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 牛越的个人主页 | 基于 MIT 协议开源</p>
+    </footer>
+</body>
+</html>
